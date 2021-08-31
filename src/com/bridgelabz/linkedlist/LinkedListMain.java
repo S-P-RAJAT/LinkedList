@@ -45,7 +45,19 @@ public class LinkedListMain<K> {
 		myLinkedList.insertNode(firstNode, secondNode);
 		myLinkedList.printNodes();
 	}
-
+	public static void deleteFront() {
+		MyNodeImpl<Integer> firstNode = new MyNodeImpl<Integer>(56);
+		MyNodeImpl<Integer> secondNode= new MyNodeImpl<Integer>(30);
+		MyNodeImpl<Integer> thirdNode = new MyNodeImpl<Integer>(70);
+		
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.addNode(firstNode);
+		myLinkedList.appendNode(thirdNode);
+		myLinkedList.insertNode(firstNode, secondNode);
+		myLinkedList.printNodes();
+		myLinkedList.pop();
+		myLinkedList.printNodes();
+	}
 	
 public static void main(String[] args) {
 	

@@ -60,6 +60,16 @@ public class MyLinkedList<K> {
 		
 		
 	}
+	
+	public INodeIF<K> pop()
+	{
+		
+		INodeIF<K> tempNode=head;
+		this.head=head.getNext();
+		
+		return tempNode;
+		
+	}
 	public void  printNodes()
 	{
 		
