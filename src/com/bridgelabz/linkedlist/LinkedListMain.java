@@ -12,12 +12,14 @@ public class LinkedListMain<K> {
 	
 	
 public static void main(String[] args) {
-	INodeIF<Integer> myFirstNode = new MyNodeImpl<Integer>(56);
-	INodeIF<Integer> mySecondNode = new MyNodeImpl<Integer>(30);
-	INodeIF<Integer> myThirdNode = new MyNodeImpl<Integer>(70);
-	myFirstNode.setNext(mySecondNode);
-	mySecondNode.setNext(myThirdNode);
-	boolean result = myFirstNode.getNext().equals(mySecondNode) && mySecondNode.getNext().equals(myThirdNode);
-	System.out.println(result);
+	MyNodeImpl<Integer> myFirstNode = new MyNodeImpl<Integer>(70);
+	MyNodeImpl<Integer> mySecondNode= new MyNodeImpl<Integer>(30);
+	MyNodeImpl<Integer> myThirdNode = new MyNodeImpl<Integer>(56);
+	
+	MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+	myLinkedList.addNode(myFirstNode);
+	myLinkedList.addNode(mySecondNode);
+	myLinkedList.addNode(myThirdNode);
+	myLinkedList.printNodes();
 }
 }
