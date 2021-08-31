@@ -70,6 +70,21 @@ public class MyLinkedList<K> {
 		return tempNode;
 		
 	}
+	public INodeIF<K> popLast()
+	{
+		INodeIF<K> tempNode= head;
+		while(tempNode.getNext()!=tail)
+		{
+			
+			tempNode=tempNode.getNext();
+			
+		}
+		this.tail=tempNode;
+		this.tail.setNext(null);
+		tempNode=tempNode.getNext();
+		return tempNode;
+		
+	}
 	public void  printNodes()
 	{
 		

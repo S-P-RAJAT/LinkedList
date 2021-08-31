@@ -54,8 +54,27 @@ public class LinkedListMain<K> {
 		myLinkedList.addNode(firstNode);
 		myLinkedList.appendNode(thirdNode);
 		myLinkedList.insertNode(firstNode, secondNode);
+		System.out.print("\nCreated Linked List: ");
+
 		myLinkedList.printNodes();
 		myLinkedList.pop();
+		System.out.print("Popped first element: ");
+
+		myLinkedList.printNodes();
+	}
+	public static void deleteRear() {
+		MyNodeImpl<Integer> firstNode = new MyNodeImpl<Integer>(56);
+		MyNodeImpl<Integer> secondNode= new MyNodeImpl<Integer>(30);
+		MyNodeImpl<Integer> thirdNode = new MyNodeImpl<Integer>(70);
+		
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.addNode(firstNode);
+		myLinkedList.appendNode(thirdNode);
+		myLinkedList.insertNode(firstNode, secondNode);
+		System.out.print("\nCreated Linked List: ");
+		myLinkedList.printNodes();
+		myLinkedList.popLast();
+		System.out.print("Popped last element: ");
 		myLinkedList.printNodes();
 	}
 	
@@ -64,7 +83,8 @@ public static void main(String[] args) {
 	addElements();
 	appendElements();
 	insertElement();
-	
+	deleteFront();
+	deleteRear();
 	
 }
 }
