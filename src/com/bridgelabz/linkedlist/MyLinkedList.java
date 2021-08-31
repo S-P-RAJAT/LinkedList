@@ -31,7 +31,7 @@ public class MyLinkedList<K> {
 		}
 		
 	}
-	public void appendNode(INodeIF newNode)
+	public void appendNode(INodeIF<K> newNode)
 	{
 		if(this.head==null)
 		{
@@ -48,6 +48,15 @@ public class MyLinkedList<K> {
 			this.tail.setNext(newNode);
 			this.tail=newNode;
 		}
+		
+		
+	}
+	
+	public void insertNode(INodeIF<K> myNode,INodeIF<K> newNode)
+	{
+		INodeIF<K> tempNode=myNode.getNext();
+		myNode.setNext(newNode);
+		newNode.setNext(tempNode);
 		
 		
 	}
