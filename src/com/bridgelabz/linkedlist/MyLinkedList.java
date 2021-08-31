@@ -106,13 +106,54 @@ public class MyLinkedList<K> {
 		
 		
 	}
-	public boolean insertGivenKey(K key,MyNodeImpl<K> newNode) {
+	public boolean insertAfterGivenKey(K key,MyNodeImpl<K> newNode) {
 		if(this.search(key)!=null) {
 			this.insertNode(this.search(key), newNode);
 			return true;
 		} else {
 			return false;
 		}
+	}
+	public INodeIF<K> deleteGivenKeyNode(K key)
+	{
+		INodeIF<K> tempNode=search(key);
+		
+		if(tempNode==head)
+		{
+			tempNode=pop();
+		}
+		else if(tempNode==tail)
+		{
+			tempNode=popLast();
+		}
+		else
+		{
+			INodeIF<K> previousNode=head;
+			while(previousNode.getNext()!=tempNode)
+			{
+				tempNode=tempNode.getNext();
+			}
+			
+			previousNode.setNext(tempNode.getNext());
+			
+		}
+		return tempNode;
+		
+	}
+	public int size()
+	{
+		int listSize=0;
+		INodeIF<K> tempNode=head;
+		if(tempNode!=null)
+		while(tempNode!=tail)
+		{
+			listSize++;
+			tempNode=tempNode.getNext();
+			
+		}
+		listSize++;
+		
+		return listSize;
 	}
 	public void  printNodes()
 	{
