@@ -16,10 +16,21 @@ public static void main(String[] args) {
 	MyNodeImpl<Integer> mySecondNode= new MyNodeImpl<Integer>(30);
 	MyNodeImpl<Integer> myThirdNode = new MyNodeImpl<Integer>(56);
 	
-	MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
-	myLinkedList.addNode(myFirstNode);
-	myLinkedList.addNode(mySecondNode);
-	myLinkedList.addNode(myThirdNode);
-	myLinkedList.printNodes();
+	MyLinkedList<Integer> myLinkedListUsingAdd = new MyLinkedList<Integer>();
+	myLinkedListUsingAdd.addNode(myFirstNode);
+	myLinkedListUsingAdd.addNode(mySecondNode);
+	myLinkedListUsingAdd.addNode(myThirdNode);
+	myLinkedListUsingAdd.printNodes();
+	
+	MyNodeImpl<Integer> firstNode = new MyNodeImpl<Integer>(56);
+	MyNodeImpl<Integer> secondNode= new MyNodeImpl<Integer>(30);
+	MyNodeImpl<Integer> thirdNode = new MyNodeImpl<Integer>(70);
+	
+	System.out.println("Linked list created by appending");
+	MyLinkedList<Integer> myLinkedListUsingAppend = new MyLinkedList<Integer>();
+	myLinkedListUsingAppend.appendNode(firstNode);
+	myLinkedListUsingAppend.appendNode(secondNode);
+	myLinkedListUsingAppend.appendNode(thirdNode);
+	myLinkedListUsingAppend.printNodes();
 }
 }
