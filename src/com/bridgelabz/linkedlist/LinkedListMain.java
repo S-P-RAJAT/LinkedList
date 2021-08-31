@@ -77,7 +77,23 @@ public class LinkedListMain<K> {
 		System.out.print("Popped last element: ");
 		myLinkedList.printNodes();
 	}
-	
+	public static void searchKey() {
+		MyNodeImpl<Integer> firstNode = new MyNodeImpl<Integer>(56);
+		MyNodeImpl<Integer> secondNode= new MyNodeImpl<Integer>(30);
+		MyNodeImpl<Integer> thirdNode = new MyNodeImpl<Integer>(70);
+		
+		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
+		myLinkedList.addNode(firstNode);
+		myLinkedList.appendNode(thirdNode);
+		myLinkedList.insertNode(firstNode, secondNode);
+		
+		Integer key=30;
+		System.out.println("\nSearching node with given key value: "+key);
+		if(myLinkedList.search(key)!=null)
+		System.out.println("Element found: "+myLinkedList.search(key).getKey());
+		else
+			System.out.println("Key not found in linked list");
+	}
 public static void main(String[] args) {
 	
 	addElements();
@@ -85,6 +101,6 @@ public static void main(String[] args) {
 	insertElement();
 	deleteFront();
 	deleteRear();
-	
+	searchKey();
 }
 }
