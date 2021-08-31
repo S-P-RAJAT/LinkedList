@@ -106,6 +106,14 @@ public class MyLinkedList<K> {
 		
 		
 	}
+	public boolean insertGivenKey(K key,MyNodeImpl<K> newNode) {
+		if(this.search(key)!=null) {
+			this.insertNode(this.search(key), newNode);
+			return true;
+		} else {
+			return false;
+		}
+	}
 	public void  printNodes()
 	{
 		

@@ -109,9 +109,8 @@ public class LinkedListMain<K> {
 		Integer key=30;
 
 		System.out.println("Searching for key in linked list: key = "+key);
-		if(myLinkedList.search(key)!=null) {
 		MyNodeImpl<Integer> newNode = new MyNodeImpl<Integer>(40);
-		myLinkedList.insertNode(myLinkedList.search(key), newNode);
+		if(myLinkedList.insertGivenKey(key,newNode)) {
 		System.out.print("After inserting: ");
 
 		myLinkedList.printNodes();
