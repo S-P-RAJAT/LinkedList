@@ -144,6 +144,19 @@ public class LinkedListMain<K> {
 		myLinkedList.deleteGivenKeyNode(keyToDelete);
 		System.out.println("After deleting, size of linked list is: "+myLinkedList.size());
 	}
+	public static void sortedLinkedList() {
+		SortedLinkedList<Integer> orderedList = new SortedLinkedList<Integer>();
+		MyNodeImpl<Integer> FirstNodeForOrdered = new MyNodeImpl<Integer>(4);
+		MyNodeImpl<Integer> secondNodeForOrdered= new MyNodeImpl<Integer>(5);
+		MyNodeImpl<Integer> thirdNodeForOrdered = new MyNodeImpl<Integer>(3);
+		MyNodeImpl<Integer> fourthNodeForOrdered = new MyNodeImpl<Integer>(20);
+		orderedList.add(FirstNodeForOrdered);
+		orderedList.add(secondNodeForOrdered);
+		orderedList.add(thirdNodeForOrdered);
+		orderedList.add(fourthNodeForOrdered);
+		System.out.println("\nSorted Linked List");
+		orderedList.printNodes();
+	}
 public static void main(String[] args) {
 	
 	addElements();
@@ -154,5 +167,6 @@ public static void main(String[] args) {
 	searchKey();
 	searchAndInsert();
 	searchAndDelete();
+	sortedLinkedList();
 }
 }
